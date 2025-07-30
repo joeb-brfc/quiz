@@ -76,7 +76,10 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 
 ## 🖼️ Wireframes _(WIP)_
 
-<!-- Placeholder – add image links or uploads -->
+<img width="299" height="269" alt="homepage" src="https://github.com/user-attachments/assets/ac74266f-3c4d-4b2e-9504-8bfcc01d9615" />
+<img width="1024" height="1536" alt="question page" src="https://github.com/user-attachments/assets/e82ab127-7721-4a77-86a4-6be4d902a4e1" />
+<img width="1024" height="1024" alt="results page" src="https://github.com/user-attachments/assets/7b151996-4030-4a83-b33c-6d9bab96c097" />
+
 
 ---
 
