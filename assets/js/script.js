@@ -151,19 +151,67 @@ const questions = [
     correct: "Pancreas"
   }
 ];
-// Link HTML elements to JavaScript
+// DOM elements
 const questionText = document.getElementById("question-text");
 const answerButtons = document.getElementById("answer-buttons");
 const scoreDisplay = document.getElementById("score");
 const questionNumber = document.getElementById("current-question");
 
+let currentQuestionIndex = 0;
+let score = 0;
+
+// Show a question
 function showQuestion() {
-  const currentQuestion = questions[0]; // Get the first question from the array
+  // If all questions are answered, end the quiz
+  if (currentQuestionIndex >= questions.length) {
+    showEndScreen();
+    return;
+  }
 
-  // Show the question text in the HTML
+  const currentQuestion = questions[currentQuestionIndex];
   questionText.textContent = currentQuestion.question;
+  questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+  answerButtons.innerHTML = "";
 
-  // Show the question number (just 1 for now)
-  questionNumber.textContent = 1;
+  currentQuestion.answers.forEach(answer => {
+    const button = document.createElement("button");
+    button.textContent = answer;
+    button.classList.add("answer-btn");
+
+    button.addEventListener("click", () => {
+      handleAnswer(answer === currentQuestion.correct);
+    });
+
+    answerButtons.appendChild(button);
+  });
 }
-showQuestion();
+
+// Handle user answer
+function handleAnswer(isCorrect) {
+  if (isCorrect) {
+    score++;
+    alert("✅ Correct!");
+  } else {
+    alert("❌ Wrong!");
+  }
+
+  // Update score display
+  scoreDisplay.textContent = `Score: ${score}`;
+
+  // Move to next question
+  currentQuestionIndex++;
+  showQuestion();
+}
+
+// End-of-quiz message
+function showEndScreen() {
+  questionText.textContent = "🎉 Quiz Complete!";
+  questionNumber.textContent = "";
+  answerButtons.innerHTML = `<p>You scored ${score} out of ${questions.length}!</p>`;
+}
+
+// Start quiz on page load
+document.addEventListener("DOMContentLoaded", () => {
+  scoreDisplay.textContent = `Score: ${score}`;
+  showQuestion();
+});
