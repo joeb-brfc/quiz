@@ -166,3 +166,4 @@ function showQuestion() {
   // Show the question number (just 1 for now)
   questionNumber.textContent = 1;
 }
+showQuestion();
