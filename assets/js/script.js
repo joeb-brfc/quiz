@@ -1,3 +1,4 @@
+// The quiz questions
 const questions = [
   {
     question: "Which element has the chemical symbol 'Fe'?",
@@ -150,3 +151,8 @@ const questions = [
     correct: "Pancreas"
   }
 ];
+// Link HTML elements to JavaScript
+const questionText = document.getElementById("question-text");
+const answerButtons = document.getElementById("answer-buttons");
+const scoreDisplay = document.getElementById("score");
+const questionNumber = document.getElementById("current-question");
