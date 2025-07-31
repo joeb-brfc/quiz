@@ -156,3 +156,13 @@ const questionText = document.getElementById("question-text");
 const answerButtons = document.getElementById("answer-buttons");
 const scoreDisplay = document.getElementById("score");
 const questionNumber = document.getElementById("current-question");
+
+function showQuestion() {
+  const currentQuestion = questions[0]; // Get the first question from the array
+
+  // Show the question text in the HTML
+  questionText.textContent = currentQuestion.question;
+
+  // Show the question number (just 1 for now)
+  questionNumber.textContent = 1;
+}
