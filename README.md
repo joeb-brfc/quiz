@@ -132,7 +132,7 @@ Responsiveness will be tested using:
 ![Question in progress](assets/images/question-in-progress.png)
 
 ### ✅ Correct Answer Feedback
-![Correct feedback](assets/images/question-correct.png)
+![Correct feedback](assets/images/correct-feedback.png)
 
 ### ❌ Incorrect Answer Feedback
 ![Incorrect feedback](assets/images/question-wrong.png)
