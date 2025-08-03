@@ -18,6 +18,30 @@ body {
   width: 90%;
 }
 
+#question-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.answer-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e7ff; /* Light blue */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answer-btn:hover:not(:disabled) {
+  background-color: #c7d2fe; /* Slightly darker blue on hover */
+}
 .logo {
   max-width: 150px;   /* Limits size */
   width: 100%;        /* Responsive scaling */
