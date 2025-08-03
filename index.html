@@ -10,15 +10,22 @@
   </head>
   <body>
     <main>
-      <div class="quiz-container">
+      <div id="quiz-container">
         <!-- Start Screen -->
         <div class="start-screen">
-          <h1>Think You’re a Genius?</h1>
-          <img src="assets/images/quiz-logo.png" alt="Quiz Logo" class="logo" />
+          <header>
+            <h1>Think You’re a Genius?</h1>
+            <img src="assets/images/quiz-logo.png" alt="Quiz Logo" class="logo" />
+          </header>
         </div>
 
-        <!-- Quiz screen -->
-        <section id="quiz-container">
+        <!-- Quiz Screen -->
+        <section class="quiz-screen">
+          <!-- ✅ Progress bar -->
+          <div class="progress-container">
+            <div id="progress-bar"><!-- Filled by JS --></div>
+          </div>
+
           <div id="question-box">
             <p id="question-text">Question will go here</p>
           </div>
@@ -33,10 +40,9 @@
           </div>
         </section>
 
-        <!-- Result Screen -->
-        <div class="end-screen"></div>
+        <!-- End/Result Screen -->
+        <div id="end-screen" class="end-screen" style="display: none;"></div>
       </div>
-      <!-- close quiz-container -->
     </main>
 
     <script src="assets/js/script.js"></script>
