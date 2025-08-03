@@ -37,16 +37,22 @@ h1, h2, #question-text {
 }
 
 #quiz-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1.5rem;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #444;
-    padding: 0.5rem 1rem;
-    background-color: #f1f5f9;
-    border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #444;
+  padding: 0.5rem 1rem;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#quiz-info div {
+  flex: 1 1 45%;
 }
 
 #question-text {
