@@ -157,17 +157,24 @@ const questionText = document.getElementById("question-text");
 const answerButtons = document.getElementById("answer-buttons");
 const scoreDisplay = document.getElementById("score");
 const questionNumber = document.getElementById("current-question");
+const progressBar = document.getElementById("progress-bar");
 
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Fisher-Yates shuffle algorithm to randomise question order
-// Credit: https://stackoverflow.com/a/2450976 (by user: Laurens Holst)
+// Fisher-Yates shuffle algorithm
+// Credit: https://stackoverflow.com/a/2450976 by Laurens Holst
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
+}
+
+// Update progress bar width
+function updateProgressBar() {
+  const percent = ((currentQuestionIndex + 1) / questions.length) * 100;
+  progressBar.style.width = `${percent}%`;
 }
 
 // Show a question
@@ -180,6 +187,7 @@ function showQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
   questionText.textContent = currentQuestion.question;
   questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+  updateProgressBar();
   answerButtons.innerHTML = "";
 
   currentQuestion.answers.forEach(answer => {
@@ -205,6 +213,7 @@ function handleAnswerClick(e) {
     selectedButton.classList.add("wrong");
   }
 
+  // Highlight correct answer
   Array.from(answerButtons.children).forEach(button => {
     button.disabled = true;
     if (button.dataset.correct === "true") {
@@ -212,15 +221,17 @@ function handleAnswerClick(e) {
     }
   });
 
+  // Update score
   scoreDisplay.textContent = `Score: ${score}`;
 
+  // Move to next question
   setTimeout(() => {
     currentQuestionIndex++;
     showQuestion();
   }, 1000);
 }
 
-// End-of-quiz screen
+// Show end screen
 function showEndScreen() {
   questionText.textContent = "🎉 Quiz Complete!";
   questionNumber.textContent = "";
@@ -237,13 +248,14 @@ function restartQuiz() {
   currentQuestionIndex = 0;
   score = 0;
   scoreDisplay.textContent = `Score: ${score}`;
-  shuffleArray(questions); // Shuffle again on restart
+  progressBar.style.width = "0%";
+  shuffleArray(questions);
   showQuestion();
 }
 
-// Start the quiz on page load
+// On page load
 document.addEventListener("DOMContentLoaded", () => {
-  shuffleArray(questions); // Shuffle questions before starting
   scoreDisplay.textContent = `Score: ${score}`;
+  shuffleArray(questions);
   showQuestion();
 });
