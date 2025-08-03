@@ -151,6 +151,7 @@ const questions = [
     correct: "Pancreas"
   }
 ];
+
 // DOM elements
 const questionText = document.getElementById("question-text");
 const answerButtons = document.getElementById("answer-buttons");
@@ -159,6 +160,15 @@ const questionNumber = document.getElementById("current-question");
 
 let currentQuestionIndex = 0;
 let score = 0;
+
+// Fisher-Yates shuffle algorithm to randomise question order
+// Credit: https://stackoverflow.com/a/2450976 (by user: Laurens Holst)
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 
 // Show a question
 function showQuestion() {
@@ -195,7 +205,6 @@ function handleAnswerClick(e) {
     selectedButton.classList.add("wrong");
   }
 
-  // Show correct answer + disable all buttons
   Array.from(answerButtons.children).forEach(button => {
     button.disabled = true;
     if (button.dataset.correct === "true") {
@@ -203,10 +212,8 @@ function handleAnswerClick(e) {
     }
   });
 
-  // Update score display
   scoreDisplay.textContent = `Score: ${score}`;
 
-  // Move to next question after delay
   setTimeout(() => {
     currentQuestionIndex++;
     showQuestion();
@@ -230,11 +237,13 @@ function restartQuiz() {
   currentQuestionIndex = 0;
   score = 0;
   scoreDisplay.textContent = `Score: ${score}`;
+  shuffleArray(questions); // Shuffle again on restart
   showQuestion();
 }
 
 // Start the quiz on page load
 document.addEventListener("DOMContentLoaded", () => {
+  shuffleArray(questions); // Shuffle questions before starting
   scoreDisplay.textContent = `Score: ${score}`;
   showQuestion();
 });
