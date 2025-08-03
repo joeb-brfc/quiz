@@ -35,7 +35,7 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 
 ### 🧑‍🎓 User Story: Question & Answer Flow
 
-**As a user**, I want to be shown one question at a time with clear answer options, not too indistinctive from several quiz shows.
+**As a user**, I want to be shown one question at a time with clear answer options, similar to familiar quiz show formats.
 
 **Acceptance Criteria:**
 - Only one question displays at a time.
