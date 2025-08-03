@@ -11,12 +11,14 @@
   </head>
   <body>
     <main>
-      <!-- Start Screen -->
-      <div class="start-screen">
-        <h1>Welcome to the Quiz</h1>
-        <img src="assets/images/quiz-logo.png" alt="Quiz Logo" class="logo" />
+      <div class="quiz-container">
+        <!-- Start Screen -->
+        <div class="start-screen">
+          <h1>Welcome to the Quiz</h1>
+          <img src="assets/images/quiz-logo.png" alt="Quiz Logo" class="logo" />
+        </div>
 
-        <!--Quiz screen-->
+        <!-- Quiz screen -->
         <section id="quiz-container">
           <div id="question-box">
             <p id="question-text">Question will go here</p>
@@ -27,16 +29,20 @@
           </div>
 
           <div id="quiz-info">
-            <div id="question-number">Question: <span
-                id="current-question">1</span></div>
-            <div id="score-display">Score: <span id="score">0</span></div>
+            <div id="question-number">
+              Question: <span id="current-question">1</span>
+            </div>
+            <div id="score-display">
+              Score: <span id="score">0</span>
+            </div>
           </div>
         </section>
 
         <!-- Result Screen -->
-        <div class="end-screen">
+        <div class="end-screen"></div>
+      </div> <!-- close quiz-container -->
+    </main>
 
-        </main>
-        <script src="assets/js/script.js"></script>
-      </body>
-    </html>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
