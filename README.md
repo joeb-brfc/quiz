@@ -12,11 +12,12 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 - Presenting multiple choice questions across a wide range of topics  
 - Giving immediate feedback on whether the selected answer is correct or incorrect  
 - Automatically progressing to the next question without extra clicks  
+- Randomising the question order for varied replayability  
 - Tracking and displaying the user's score throughout the quiz  
 - Showing which question the user is currently on  
+- Providing a dynamic visual progress bar that updates in real time  
 - Delivering a final score summary and end-of-quiz feedback  
-- Being fully responsive and accessible across all devices  
-- (Coming soon) Including a progress bar to visually track completion
+- Being fully responsive and accessible across all devices
 
 ## 🌐 Deployment Instructions
 
@@ -40,11 +41,26 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 **Acceptance Criteria:**
 - Only one question displays at a time.
 - Answer choices are easy to click and readable.
+- Questions appear in a randomised order on each playthrough.
 
 **Tasks:**
 - Create a data array of question objects.
+- Use a shuffle function to randomise questions.
 - Use JavaScript to update the DOM with each question.
 - Add event listeners to buttons for answer selection.
+
+---
+
+### 📊 User Story: Progress Bar
+
+**As a user**, I want to see how far through the quiz I am, so I feel a sense of progress and completion.
+
+**Acceptance Criteria:**
+- A visual progress bar is displayed and updates with each new question.
+
+**Tasks:**
+- Create a progress bar in the HTML.
+- Use JavaScript to calculate and update progress width dynamically.
 
 ---
 
@@ -69,11 +85,12 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 
 **Acceptance Criteria:**
 - Correct/incorrect answers are colour-coded.
+- Feedback appears before the next question loads.
 
 **Tasks:**
 - Use JavaScript to compare selected answer to correct answer.
-- Apply CSS class for feedback (e.g., green/red highlight).
-
+- Apply CSS class for visual feedback (e.g., green/red highlight).
+- Delay progression briefly to allow feedback to register.
 ---
 
 ## 🖼️ Wireframes _(WIP)_
