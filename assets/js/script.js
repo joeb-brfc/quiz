@@ -162,7 +162,6 @@ let score = 0;
 
 // Show a question
 function showQuestion() {
-  // If all questions are answered, end the quiz
   if (currentQuestionIndex >= questions.length) {
     showEndScreen();
     return;
@@ -177,40 +176,64 @@ function showQuestion() {
     const button = document.createElement("button");
     button.textContent = answer;
     button.classList.add("answer-btn");
+    button.dataset.correct = answer === currentQuestion.correct;
 
-    button.addEventListener("click", () => {
-      handleAnswer(answer === currentQuestion.correct);
-    });
-
+    button.addEventListener("click", handleAnswerClick);
     answerButtons.appendChild(button);
   });
 }
 
-// Handle user answer
-function handleAnswer(isCorrect) {
+// Handle answer click
+function handleAnswerClick(e) {
+  const selectedButton = e.target;
+  const isCorrect = selectedButton.dataset.correct === "true";
+
   if (isCorrect) {
+    selectedButton.classList.add("correct");
     score++;
-    alert("✅ Correct!");
   } else {
-    alert("❌ Wrong!");
+    selectedButton.classList.add("wrong");
   }
+
+  // Show correct answer + disable all buttons
+  Array.from(answerButtons.children).forEach(button => {
+    button.disabled = true;
+    if (button.dataset.correct === "true") {
+      button.classList.add("correct");
+    }
+  });
 
   // Update score display
   scoreDisplay.textContent = `Score: ${score}`;
 
-  // Move to next question
-  currentQuestionIndex++;
-  showQuestion();
+  // Move to next question after delay
+  setTimeout(() => {
+    currentQuestionIndex++;
+    showQuestion();
+  }, 1000);
 }
 
-// End-of-quiz message
+// End-of-quiz screen
 function showEndScreen() {
   questionText.textContent = "🎉 Quiz Complete!";
   questionNumber.textContent = "";
-  answerButtons.innerHTML = `<p>You scored ${score} out of ${questions.length}!</p>`;
+  answerButtons.innerHTML = `
+    <p>You scored ${score} out of ${questions.length}!</p>
+    <button id="restart-btn">Play Again</button>
+  `;
+
+  document.getElementById("restart-btn").addEventListener("click", restartQuiz);
 }
 
-// Start quiz on page load
+// Restart the quiz
+function restartQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  scoreDisplay.textContent = `Score: ${score}`;
+  showQuestion();
+}
+
+// Start the quiz on page load
 document.addEventListener("DOMContentLoaded", () => {
   scoreDisplay.textContent = `Score: ${score}`;
   showQuestion();

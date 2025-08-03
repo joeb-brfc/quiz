@@ -1,0 +1,14 @@
+.correct {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.wrong {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.answer-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
