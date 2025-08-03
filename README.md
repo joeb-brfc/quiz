@@ -85,7 +85,7 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 
 ---
 
-## 🧭 Navigation Structure _(WIP)_
+## 🗂️ Site Structure _(WIP)_
 
 The site will consist of a single main page with:
 
