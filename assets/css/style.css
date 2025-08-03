@@ -18,6 +18,19 @@ body {
   width: 90%;
 }
 
+#quiz-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #444;
+  padding: 0.5rem 1rem;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+}
+
 #question-text {
   font-size: 1.5rem;
   font-weight: 600;
