@@ -126,6 +126,20 @@ Responsiveness will be tested using:
 - Relative units (%, rem) and media queries
 
 ---
+## 📸 Screenshots
+
+### ❓ Question in Progress
+![Question in progress](assets/images/question-in-progress.png)
+
+### ✅ Correct Answer Feedback
+![Correct feedback](assets/images/question-correct.png)
+
+### ❌ Incorrect Answer Feedback
+![Incorrect feedback](assets/images/question-wrong.png)
+
+### 🎯 Final Score Screen
+![Final score](assets/images/quiz-finished.png)
+---
 
 ## 🧪 Automated Testing _(WIP)_
 
