@@ -134,3 +134,23 @@ h1, h2, #question-text {
     background-color: #4f46e5;
     /* Darker indigo on hover */
 }
+
+/* Progress Bar Container */
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  margin: 1rem 0;
+  height: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Fill Bar */
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50; /* Green progress color */
+  transition: width 0.4s ease;
+  border-radius: 20px 0 0 20px;
+}
