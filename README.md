@@ -147,6 +147,14 @@ Responsiveness will be tested using:
 
 ---
 
+## 🙌 Acknowledgements
+
+- Question randomisation implemented using the [Fisher-Yates Shuffle](https://stackoverflow.com/a/2450976), credited to Laurens Holst via Stack Overflow.
+- Progress bar functionality adapted from [MDN Web Docs – style manipulation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style).
+- Fonts provided via [Google Fonts](https://fonts.google.com/)
+
+---
+
 ## 🧪 W3C Validation
 
 ### HTML Validation _(WIP)_
