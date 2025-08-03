@@ -1,6 +1,6 @@
-# 🧠 General Knowledge Quiz – Interactive Web Game
+# 🧠 Think You're a Genius? – General Knowledge Quiz
 
-This project is a responsive, JavaScript-powered interactive quiz focused on general knowledge. It aims to provide users with a fun, educational experience while testing their memory and trivia skills. Players receive instant feedback and can track their score as they progress.
+An interactive web-based quiz that tests your general knowledge with multiple-choice questions. Clean design, responsive layout, and instant visual feedback to keep users engaged.
 
 ---
 
@@ -8,13 +8,15 @@ This project is a responsive, JavaScript-powered interactive quiz focused on gen
 
 The site is built for curious minds and trivia lovers of all ages. It provides value by:
 
-- Offering a fun and accessible brain-training experience
-- Presenting multiple choice questions across a range of categories
-- Using JavaScript to track and display the user's score
-- Giving immediate feedback on whether the answer is right or wrong
-- Promoting a responsive and accessible experience across all devices
-
----
+- Offering a fun and accessible brain-training experience  
+- Presenting multiple choice questions across a wide range of topics  
+- Giving immediate feedback on whether the selected answer is correct or incorrect  
+- Automatically progressing to the next question without extra clicks  
+- Tracking and displaying the user's score throughout the quiz  
+- Showing which question the user is currently on  
+- Delivering a final score summary and end-of-quiz feedback  
+- Being fully responsive and accessible across all devices  
+- (Coming soon) Including a progress bar to visually track completion
 
 ## 🌐 Deployment Instructions
 
@@ -33,7 +35,7 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 
 ### 🧑‍🎓 User Story: Question & Answer Flow
 
-**As a user**, I want to be shown one question at a time with clear answer options, not too indistinctive from several quiz shows.
+**As a user**, I want to be shown one question at a time with clear answer options, similar to familiar quiz show formats.
 
 **Acceptance Criteria:**
 - Only one question displays at a time.
@@ -83,7 +85,7 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 
 ---
 
-## 🧭 Navigation Structure _(WIP)_
+## 🗂️ Site Structure _(WIP)_
 
 The site will consist of a single main page with:
 
@@ -123,6 +125,20 @@ Responsiveness will be tested using:
 - Manual testing on phone and tablet
 - Relative units (%, rem) and media queries
 
+---
+## 📸 Screenshots
+
+### ❓ Question in Progress
+![Question in progress](assets/images/question-in-progress.png)
+
+### ✅ Correct Answer Feedback
+![Correct feedback](assets/images/question-correct.png)
+
+### ❌ Incorrect Answer Feedback
+![Incorrect feedback](assets/images/question-wrong.png)
+
+### 🎯 Final Score Screen
+![Final score](assets/images/quiz-finished.png)
 ---
 
 ## 🧪 Automated Testing _(WIP)_
