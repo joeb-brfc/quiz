@@ -147,16 +147,66 @@ The site will consist of a single main page with:
 
 ---
 
-## ✅ Testing _(WIP)_
+## ✅ Testing
 
-Testing will be conducted across multiple devices and browsers to verify:
+Manual and automated testing were used to ensure the quiz works correctly across devices, browsers, and screen sizes.
 
-- Question and answer functionality
-- Score calculation and display
-- Colour-coded feedback
-- Button interactions
-- Layout responsiveness
-- Accessibility for keyboard users
+---
+
+### 📱 Manual Testing
+
+The quiz was manually tested on the following:
+
+- **Browsers:** Chrome, Edge, Firefox
+- **Devices:** Desktop, tablet, mobile (using Chrome DevTools and real devices)
+- **Functional tests performed:**
+  - Quiz loads correctly
+  - Questions are shuffled each time
+  - Only one question is shown at a time
+  - Score updates correctly after each answer
+  - Correct/incorrect feedback appears (green/red)
+  - Progress bar updates in real-time
+  - Final score screen is shown at the end
+  - "Play Again" button resets the quiz fully
+  - Keyboard accessibility works for navigation and selection
+  - Layout remains fully responsive on all screen sizes
+
+All features worked as intended, with no bugs or performance issues detected during testing.
+
+---
+
+### 🧪 Lighthouse Audit (Mobile)
+
+A Lighthouse audit was run using Chrome DevTools in **mobile** view. The quiz scored highly in all categories:
+
+- **Performance:** 92  
+- **Accessibility:** 100  
+- **Best Practices:** 100
+
+![Lighthouse Mobile Audit](assets/images/lighthouse-mobile.png)
+
+---
+
+### ✅ HTML Validation – W3C
+
+The site’s HTML was tested using the [W3C HTML Validator](https://validator.w3.org).
+
+- No major errors were found
+- Minor info messages were related to void element slashes (optional)
+- One warning suggested adding a heading to a section, which does not affect functionality
+
+![W3C HTML Validation](assets/images/html-w3c.png)
+
+---
+
+### 🎨 CSS Validation – W3C
+
+The site’s CSS was tested using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator).
+
+- No errors or warnings were found
+- The document was confirmed to be valid CSS level 3 + SVG
+
+![W3C CSS Validation](assets/images/css-w3c.png)
 
 ---
 
