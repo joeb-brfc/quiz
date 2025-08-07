@@ -34,64 +34,90 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 
 ## 🧩 User Stories
 
+---
+
 ### 🧑‍🎓 User Story: Question & Answer Flow
 
-**As a user**, I want to be shown one question at a time with clear answer options, similar to familiar quiz show formats.
+**As a user**, I want to be shown one question at a time with clear answer options, so I can focus without distractions.
 
 **Acceptance Criteria:**
-- Only one question displays at a time.
-- Answer choices are easy to click and readable.
-- Questions appear in a randomised order on each playthrough.
+- Only one question is visible at a time.
+- Questions appear in a different order each time.
+- Answer options are clearly labelled and easy to click.
 
 **Tasks:**
-- Create a data array of question objects.
-- Use a shuffle function to randomise questions.
-- Use JavaScript to update the DOM with each question.
-- Add event listeners to buttons for answer selection.
+- Create an array of question objects.
+- Randomise the array using a shuffle function.
+- Display each question and answer set via DOM manipulation.
+- Add event listeners to handle answer selection.
 
 ---
 
-### 📊 User Story: Progress Bar
+### 📊 User Story: Progress Feedback
 
-**As a user**, I want to see how far through the quiz I am, so I feel a sense of progress and completion.
+**As a user**, I want to see how far through the quiz I am, so I feel a sense of progression.
 
 **Acceptance Criteria:**
-- A visual progress bar is displayed and updates with each new question.
+- A visual progress bar updates with each question.
+- A label shows the current question number out of total.
 
 **Tasks:**
-- Create a progress bar in the HTML.
-- Use JavaScript to calculate and update progress width dynamically.
+- Add a styled progress bar element to the HTML.
+- Create a function to calculate and update progress.
+- Update the visual and numeric display dynamically with each new question.
 
 ---
 
-### 🧠 User Story: Score Tracking
+### 🧠 User Story: Real-Time Score Tracking
 
-**As a user**, I want to see how many questions I've answered correctly, so I can monitor my progress and aim to beat my own score.
+**As a user**, I want to see how many answers I’ve got right, so I can monitor my performance.
 
 **Acceptance Criteria:**
-- A score is displayed and updates after each question.
-- The final score is shown at the end of the quiz.
+- The score is displayed and updates after each question.
+- The final score is shown clearly at the end.
 
 **Tasks:**
 - Use a variable to track score.
-- Update score in real-time and display it in the UI.
-- Show a message at the end with total points earned.
+- Increment the score on correct answers.
+- Display the score in a designated section of the page.
+- Show the final score summary on the end screen.
 
 ---
 
-### 🎨 User Story: Visual Feedback & Engagement
+### 🎨 User Story: Visual Answer Feedback
 
-**As a user**, I want to receive instant feedback when I answer a question, so I know if I was correct and stay engaged.
+**As a user**, I want to get immediate feedback after I answer, so I know if I was right or wrong.
 
 **Acceptance Criteria:**
-- Correct/incorrect answers are colour-coded.
-- Feedback appears before the next question loads.
+- Correct answers are highlighted green, incorrect answers red.
+- All buttons are disabled after selection.
+- Correct answer is always shown, even if the user chose wrong.
 
 **Tasks:**
-- Use JavaScript to compare selected answer to correct answer.
-- Apply CSS class for visual feedback (e.g., green/red highlight).
-- Delay progression briefly to allow feedback to register.
+- Use a dataset to store the correct answer.
+- Apply CSS classes for visual feedback.
+- Disable all answer buttons after a selection is made.
+- Add a delay before showing the next question.
+
 ---
+
+### 🔁 User Story: Replayability
+
+**As a user**, I want to restart the quiz when I’m finished, so I can try again and improve my score.
+
+**Acceptance Criteria:**
+- A “Play Again” button appears on the final screen.
+- The score, progress, and question index reset when restarting.
+- A fresh set of shuffled questions is shown.
+
+**Tasks:**
+- Create a restart function that resets state variables.
+- Attach an event listener to the restart button.
+- Call the shuffle function again on restart.
+- Reload the first question and update the score/progress displays.
+
+💬 All acceptance criteria and tasks listed in the user stories have been fully implemented and verified during development.
+
 
 ## 🖼️ Wireframes _(WIP)_
 
