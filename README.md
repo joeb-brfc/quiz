@@ -21,8 +21,10 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 
 ## 🌐 Deployment Instructions
 
-- **Live Website:** _TBC_
-- **GitHub Repository:** _TBC_
+- **Live Website:** [https://joeb-brfc.github.io/quiz](https://joeb-brfc.github.io/quiz)
+- **GitHub Repository:** [https://github.com/joeb-brfc/quiz](https://github.com/joeb-brfc/quiz)
+
+---
 
 ### 🔧 Running the site locally:
 1. Clone the repository or download it as a ZIP.
