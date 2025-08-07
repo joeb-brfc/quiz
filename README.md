@@ -119,7 +119,7 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 💬 All acceptance criteria and tasks listed in the user stories have been fully implemented and verified during development.
 
 
-## 🖼️ Wireframes _(WIP)_
+## 🖼️ Wireframes
 
 <img width="299" height="269" alt="homepage" src="https://github.com/user-attachments/assets/ac74266f-3c4d-4b2e-9504-8bfcc01d9615" />
 <img width="1024" height="1536" alt="question page" src="https://github.com/user-attachments/assets/e82ab127-7721-4a77-86a4-6be4d902a4e1" />
@@ -128,7 +128,7 @@ The site is built for curious minds and trivia lovers of all ages. It provides v
 
 ---
 
-## 🗂️ Site Structure _(WIP)_
+## 🗂️ Site Structure 
 
 The site will consist of a single main page with:
 
@@ -140,7 +140,7 @@ The site will consist of a single main page with:
 
 ---
 
-## 🔗 External Resources _(WIP)_
+## 🔗 External Resources 
 - Sound effects (e.g., [Zapsplat](https://www.zapsplat.com))
 - Google Fonts or icons
 - JavaScript references
@@ -210,7 +210,7 @@ The site’s CSS was tested using the [W3C CSS Validator](https://jigsaw.w3.org/
 
 ---
 
-## 📱 Responsiveness _(WIP)_
+## 📱 Responsiveness 
 
 Responsiveness will be tested using:
 
@@ -234,7 +234,7 @@ Responsiveness will be tested using:
 ![Final score](assets/images/quiz-finished.png)
 ---
 
-## 🧪 Automated Testing _(WIP)_
+## 🧪 Automated Testing 
 
 <!-- Placeholder – if using Lighthouse or other tools -->
 
