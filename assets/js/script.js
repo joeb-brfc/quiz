@@ -162,8 +162,13 @@ const progressBar = document.getElementById("progress-bar");
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Fisher-Yates shuffle algorithm
-// Credit: https://stackoverflow.com/a/2450976 by Laurens Holst
+/**
+ * Shuffles the elements of an array in place using the Fisher-Yates algorithm.
+ * This helps randomize the question order each time the quiz is started.
+ * 
+ * @param {Array} array - The array to be shuffled.
+ * @returns {void}
+ */
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -171,13 +176,22 @@ function shuffleArray(array) {
   }
 }
 
-// Update progress bar width
+/**
+ * Updates the progress bar to visually show how far the user has progressed through the quiz.
+ * 
+ * @returns {void}
+ */
 function updateProgressBar() {
   const percent = ((currentQuestionIndex + 1) / questions.length) * 100;
   progressBar.style.width = `${percent}%`;
 }
 
-// Show a question
+/**
+ * Displays the current question and its answer options on the page.
+ * If the quiz is complete, it shows the end screen.
+ * 
+ * @returns {void}
+ */
 function showQuestion() {
   if (currentQuestionIndex >= questions.length) {
     showEndScreen();
@@ -201,7 +215,14 @@ function showQuestion() {
   });
 }
 
-// Handle answer click
+/**
+ * Handles user interaction when an answer button is clicked.
+ * Updates the score, visually marks the correct/wrong answers,
+ * and moves to the next question after a short delay.
+ * 
+ * @param {Event} e - The click event from the selected answer button.
+ * @returns {void}
+ */
 function handleAnswerClick(e) {
   const selectedButton = e.target;
   const isCorrect = selectedButton.dataset.correct === "true";
@@ -231,7 +252,12 @@ function handleAnswerClick(e) {
   }, 1000);
 }
 
-// Show end screen
+/**
+ * Displays the end screen once the quiz is complete.
+ * Shows final score and a "Play Again" button.
+ * 
+ * @returns {void}
+ */
 function showEndScreen() {
   questionText.textContent = "🎉 Quiz Complete!";
   questionNumber.textContent = "";
@@ -243,7 +269,11 @@ function showEndScreen() {
   document.getElementById("restart-btn").addEventListener("click", restartQuiz);
 }
 
-// Restart the quiz
+/**
+ * Resets all quiz variables and restarts the quiz with shuffled questions.
+ * 
+ * @returns {void}
+ */
 function restartQuiz() {
   currentQuestionIndex = 0;
   score = 0;
@@ -253,7 +283,12 @@ function restartQuiz() {
   showQuestion();
 }
 
-// On page load
+/**
+ * Initializes the quiz when the page has fully loaded.
+ * Sets the starting score and displays the first question.
+ * 
+ * @returns {void}
+ */
 document.addEventListener("DOMContentLoaded", () => {
   scoreDisplay.textContent = `Score: ${score}`;
   shuffleArray(questions);
