@@ -248,26 +248,22 @@ Responsiveness will be tested using:
 
 ---
 
-## 🧪 W3C Validation
-
-### HTML Validation _(WIP)_
-
-### CSS Validation _(WIP)_
-
----
-
-## 📋 Test Summary Documentation _(WIP)_
+## 📋 Test Summary Documentation
 
 | Feature                          | Tested Device/Browser       | Status      |
 |----------------------------------|-----------------------------|-------------|
-| Quiz loads & starts              |                             |             |
-| Questions update dynamically     |                             |             |
-| Score tracks correctly           |                             |             |
-| Correct/incorrect feedback       |                             |             |
-| End screen displays total score  |                             |             |
-| Colour feedback is visible       |                             |             |
-| Responsive on all screen sizes   |                             |             |
-| HTML5 validity (W3C)             |                             |             |
-| CSS3 validity (W3C)              |                             |             |
+| Quiz loads & starts              | Chrome, Edge, Firefox       | ✅ Pass      |
+| Questions update dynamically     | All                         | ✅ Pass      |
+| Score tracks correctly           | All                         | ✅ Pass      |
+| Correct/incorrect feedback       | All                         | ✅ Pass      |
+| End screen displays total score  | All                         | ✅ Pass      |
+| "Play Again" restarts quiz       | All                         | ✅ Pass      |
+| Colour feedback is visible       | All                         | ✅ Pass      |
+| Responsive on all screen sizes   | Desktop, Tablet, Mobile     | ✅ Pass      |
+| HTML5 validity (W3C)             | validator.w3.org            | ✅ Pass      |
+| CSS3 validity (W3C)              | jigsaw.w3.org               | ✅ Pass      |
+| Lighthouse Performance           | Chrome DevTools (mobile)    | ✅ 92 Score  |
+| Lighthouse Accessibility         | Chrome DevTools (mobile)    | ✅ 100 Score |
+| Lighthouse Best Practices        | Chrome DevTools (mobile)    | ✅ 100 Score |
 
 ---
