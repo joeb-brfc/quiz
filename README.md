@@ -269,3 +269,6 @@ Responsiveness will be tested using:
 | Lighthouse Best Practices        | Chrome DevTools (mobile)    | ✅ 100 Score |
 
 ---
+## 💬 Submission Reflection
+
+This project was created as part of the Code Institute's Milestone 2. It demonstrates DOM manipulation, JavaScript logic, responsive design, and user interactivity. All planned user stories and acceptance criteria have been fully implemented and tested. Mentor feedback was applied to improve code documentation and readability.
